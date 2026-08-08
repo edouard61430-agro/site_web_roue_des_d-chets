@@ -1,0 +1,27 @@
+/* =========================
+   STYLE ROUE DANGEREUX
+   ========================= */
+
+body {
+    background: #fff3e8;
+}
+
+h1 {
+    color: #b55224;
+}
+
+button {
+    background: #d66a2c;
+}
+
+button:hover {
+    background: #b95322;
+}
+
+.bouton-lien {
+    background: #b55224;
+}
+
+.bouton-lien:hover {
+    background: #933f1b;
+}

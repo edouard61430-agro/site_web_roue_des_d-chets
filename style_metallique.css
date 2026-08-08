@@ -1,0 +1,27 @@
+/* =========================
+   STYLE ROUE MÉTALLIQUE
+   ========================= */
+
+body {
+    background: #eef1f3;
+}
+
+h1 {
+    color: #4d5d66;
+}
+
+button {
+    background: #667984;
+}
+
+button:hover {
+    background: #52636d;
+}
+
+.bouton-lien {
+    background: #4d5d66;
+}
+
+.bouton-lien:hover {
+    background: #3d4b53;
+}
