@@ -1,57 +1,44 @@
-<!DOCTYPE html>
-<html lang="fr">
+<title>Roue des déchets</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style_non_dangereux.css">
 
-    <title>Roue des déchets</title>
+<h1>Roue des déchets non dangereux</h1>
 
-    <link rel="stylesheet" href="style_non_dangereux.css">
-</head>
+<div class="zone-roue">
 
-<body>
+    <div class="roue-container">
 
-    <h1>Roue des déchets non dangereux</h1>
+        <img src="images/roue_dechets.png"
+             id="roue-non-dangereux"
+             class="roue"
+             alt="Roue des déchets">
 
-    <div class="zone-roue">
-
-        <div class="roue-container">
-
-            <img src="images/roue_dechets.png"
-                 class="roue"
-                 alt="Roue des déchets">
-
-            <img src="images/roue_poubelles.png"
-                 class="roue-poubelles"
-                 alt="Disque supérieur">
-
-        </div>
-
-        <div class="liens-roues">
-
-            <a href="roue_metallique.html" class="bouton-lien">
-                Roue métallique
-            </a>
-
-            <a href="roue_dangereux.html" class="bouton-lien">
-                Roue dangereux
-            </a>
-
-        </div>
+        <img src="images/roue_poubelles.png"
+             class="roue-poubelles"
+             alt="Disque supérieur">
 
     </div>
 
-    <div class="boutons">
+    <div class="liens-roues">
 
-        <button id="spin-gauche">↶ Tourner à gauche</button>
+        <a href="roue_metallique.html" class="bouton-lien">
+            Roue métallique
+        </a>
 
-        <button id="spin-droite">Tourner à droite ↷</button>
+        <a href="roue_dangereux.html" class="bouton-lien">
+            Roue dangereux
+        </a>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
 
-</body>
+<div class="boutons">
 
-</html>
+    <button id="spin-gauche">↶ Tourner à gauche</button>
+
+    <button id="spin-droite">Tourner à droite ↷</button>
+
+</div>
+
+<script src="script.js"></script>

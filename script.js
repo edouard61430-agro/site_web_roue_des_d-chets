@@ -1,26 +1,52 @@
 // =========================
-// ROTATION DES 3 ROUES
+// SCRIPT COMMUN AUX 3 ROUES
 // =========================
 
-let rotationNonDangereux = 0;
-let rotationMetallique = 0;
-let rotationDangereux = 0;
+document.addEventListener("DOMContentLoaded", function () {
 
-// À appeler lorsque l'utilisateur clique sur le bouton
-function tournerLesRoues() {
+    // On cherche la roue présente sur la page
+    const roueNonDangereux = document.getElementById("roue-non-dangereux");
+    const roueMetallique = document.getElementById("roue-metallique");
+    const roueDangereux = document.getElementById("roue-dangereux");
 
-    // Angles fixes à chaque clic
-    rotationNonDangereux += 30;
-    rotationMetallique += 36;
-    rotationDangereux += 32.7;
+    let roue = null;
+    let angle = 0;
 
-    // Application des rotations
-    document.getElementById("roue-non-dangereux").style.transform =
-        `rotate(${rotationNonDangereux}deg)`;
+    // Déterminer la roue et son angle
+    if (roueNonDangereux) {
+        roue = roueNonDangereux;
+        angle = 30;
+    }
+    else if (roueMetallique) {
+        roue = roueMetallique;
+        angle = 36;
+    }
+    else if (roueDangereux) {
+        roue = roueDangereux;
+        angle = 32.7;
+    }
 
-    document.getElementById("roue-metallique").style.transform =
-        `rotate(${rotationMetallique}deg)`;
+    // Rotation actuelle
+    let rotation = 0;
 
-    document.getElementById("roue-dangereux").style.transform =
-        `rotate(${rotationDangereux}deg)`;
-}
+    // Boutons
+    const boutonGauche = document.getElementById("spin-gauche");
+    const boutonDroite = document.getElementById("spin-droite");
+
+    // Tourner à gauche
+    if (boutonGauche) {
+        boutonGauche.addEventListener("click", function () {
+            rotation -= angle;
+            roue.style.transform = `rotate(${rotation}deg)`;
+        });
+    }
+
+    // Tourner à droite
+    if (boutonDroite) {
+        boutonDroite.addEventListener("click", function () {
+            rotation += angle;
+            roue.style.transform = `rotate(${rotation}deg)`;
+        });
+    }
+
+});
