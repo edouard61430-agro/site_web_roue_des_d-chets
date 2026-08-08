@@ -1,16 +1,26 @@
-const roue = document.querySelector(".roue");
+// =========================
+// ROTATION DES 3 ROUES
+// =========================
 
-const boutonGauche = document.querySelector("#spin-gauche");
-const boutonDroite = document.querySelector("#spin-droite");
+let rotationNonDangereux = 0;
+let rotationMetallique = 0;
+let rotationDangereux = 0;
 
-let rotation = 0;
+// À appeler lorsque l'utilisateur clique sur le bouton
+function tournerLesRoues() {
 
-boutonGauche.addEventListener("click", () => {
-    rotation -= 90;
-    roue.style.transform = `rotate(${rotation}deg)`;
-});
+    // Angles fixes à chaque clic
+    rotationNonDangereux += 30;
+    rotationMetallique += 36;
+    rotationDangereux += 32.7;
 
-boutonDroite.addEventListener("click", () => {
-    rotation += 90;
-    roue.style.transform = `rotate(${rotation}deg)`;
-});
+    // Application des rotations
+    document.getElementById("roue-non-dangereux").style.transform =
+        `rotate(${rotationNonDangereux}deg)`;
+
+    document.getElementById("roue-metallique").style.transform =
+        `rotate(${rotationMetallique}deg)`;
+
+    document.getElementById("roue-dangereux").style.transform =
+        `rotate(${rotationDangereux}deg)`;
+}
